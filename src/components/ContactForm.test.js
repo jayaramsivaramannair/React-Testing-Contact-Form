@@ -28,6 +28,28 @@ test('When a user fills out and submit the form, a new contact is created and di
     const firstName = screen.findByText(/jayaram/i);
 
     firstName.then((element) => {
+        console.log(element);
+        expect(element).toBeInTheDocument();
+    })
+
+    const lastName = screen.findByText(/nair/i);
+
+    lastName.then((element) => {
+        console.log(element);
+        expect(element).toBeInTheDocument();
+    })
+
+    const email = screen.findByText(/jsnair46@gmail.com/i);
+
+    email.then((element) => {
+        console.log(element);
+        expect(element).toBeInTheDocument();
+    })
+
+    const message = screen.findByText(/i am a coder/i);
+
+    message.then((element) => {
+        console.log(element);
         expect(element).toBeInTheDocument();
     })
 })
